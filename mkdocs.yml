@@ -1,0 +1,59 @@
+site_name: My Docs
+theme:
+    name: material
+    logo: assets/logo.png
+    favicon: assets/favicon.ico
+
+    font:
+        text: Merriweather Sans
+        code: Red Hat Mono
+
+    palette:
+        # Dark Mode
+        - scheme: slate
+          toggle:
+              icon: material/weather-sunny
+              name: Dark mode
+          primary: green
+          accent: deep purple
+
+        # Light Mode
+        - scheme: default
+          toggle:
+              icon: material/weather-night
+              name: Light mode
+          primary: blue
+          accent: deep orange
+
+    features:
+        - navigation.footer
+
+markdown_extensions:
+    # Set Code Block
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    # Set Content Tabs
+    - pymdownx.tabbed:
+          alternate_style: true
+    # Set Admonitions(CallOut)
+    - admonition
+    - pymdownx.details
+    # Set Mermaid
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+    social:
+        - icon: simple/youtube
+          link: https://youtube.com/@james-willett
+        - icon: simple/linkedin
+          link: https://linkedin.com/in/willettjames
+
+copyright: Copyright &copy; 2024 James Willett
